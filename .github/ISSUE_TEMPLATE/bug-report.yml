@@ -1,0 +1,72 @@
+name: Bug report
+description: Report a repo bug, broken make target, or doc error.
+title: "[bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. This is a private POC repository tied to the
+        Exowatt x AWS x NVIDIA Omniverse engagement. For AWS account, NVIDIA
+        access, or quota questions, see [SUPPORT.md](../../SUPPORT.md).
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: "make verify failed at the provision_g6e plan with..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to see?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Numbered, exact commands on a clean checkout.
+      placeholder: |
+        1. git clone git@github.com:dmvevents/exowatt-omniverse-aws.git
+        2. cd exowatt-omniverse-aws
+        3. python3 -m venv .venv && source .venv/bin/activate
+        4. make verify
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, AWS region, whether boto3 is installed.
+      placeholder: |
+        OS: Ubuntu 22.04
+        Python: 3.11.6
+        AWS region: us-east-1
+        boto3: not installed (offline path)
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste the full error or traceback in the code block below.
+      render: shell
+
+  - type: dropdown
+    id: verify-run
+    attributes:
+      label: Have you run `make verify` on a clean checkout?
+      options:
+        - "Yes, it failed (logs above)"
+        - "Yes, it passed but the bug still reproduces"
+        - "No"
+    validations:
+      required: true

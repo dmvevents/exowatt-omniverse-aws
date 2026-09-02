@@ -1,0 +1,50 @@
+name: Feature request
+description: Propose a change to the harness, agent loop, skills, or docs.
+title: "[feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for additions to the POC scaffolding. For customer production
+        requests, route through the AWS account team instead.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem this solves
+      description: What is the user or engagement need behind the request?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: A concrete description of the change.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Which track does this touch?
+      multiple: true
+      options:
+        - harness
+        - agent
+        - skills
+        - docs
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Is this in scope for the POC?
+      options:
+        - "POC (this engagement window)"
+        - "Future (post-POC pilot)"
+        - "Out-of-scope"
+    validations:
+      required: true

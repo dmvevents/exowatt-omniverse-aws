@@ -1,0 +1,6 @@
+# Dev/test dependencies for the offline harness test suite.
+#
+# The harness itself needs NO third-party packages: it is pure standard library
+# and imports boto3 lazily, only for the gated live provisioning path (which the
+# tests mock, so the suite never contacts AWS). pytest is the only dev dep.
+pytest>=7.0

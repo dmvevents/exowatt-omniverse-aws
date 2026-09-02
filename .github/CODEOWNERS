@@ -1,0 +1,14 @@
+# Exowatt x AWS x NVIDIA Omniverse digital twin - code ownership
+#
+# This is a private POC repository. Today the single owner is Anton
+# Alexander (AWS NVIDIA Specialist). The per-track entries below exist so
+# review routing is already correct if other contributors join during the
+# engagement.
+
+* @dmvevents
+
+# Track ownership (review routing if other contributors join):
+/harness/          @dmvevents
+/agent/            @dmvevents
+/.claude/          @dmvevents
+/docs/             @dmvevents

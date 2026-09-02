@@ -1,0 +1,28 @@
+Copyright (c) 2026 Anton Alexander. All rights reserved.
+
+This repository is confidential and proprietary material provided as part
+of the AWS + NVIDIA customer engagement with Exowatt.
+
+USAGE
+- Permitted: review, evaluation, and proof-of-concept work by named
+  personnel at Exowatt, AWS, and NVIDIA assigned to this engagement.
+- Not permitted: redistribution, public disclosure, derivative commercial
+  works, or use outside the scope of the named engagement.
+
+NO WARRANTY
+- This is POC / customer-engagement scaffolding. It is provided "as is",
+  without warranty of any kind, express or implied. It is not production
+  code and has not been validated for production use or commercial
+  deployment. Nothing here provisions cloud capacity or spends money on
+  its own — every live path is a documented, gated step.
+
+THIRD-PARTY MATERIAL
+- NVIDIA Omniverse, Omniverse Kit, USD, and PhysX are NVIDIA / Pixar
+  properties referenced here for this customer engagement only; no NVIDIA
+  or Pixar code is redistributed in this repository.
+- AWS names and marks are the property of Amazon Web Services.
+- Open-source dependencies retain their respective licenses (see NOTICE).
+
+CONTACT
+- Anton Alexander (AWS NVIDIA Specialist)
+- Jingchao "JC" Yang (AWS Solutions Architect)

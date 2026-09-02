@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+*.log
+scratch/
+.omc/
+
+# Kept agent transcripts are gitignored (audit trail stays local)
+agent/transcripts/*
+!agent/transcripts/.gitkeep
+
+# Personal Claude Code overrides stay local; the shared .claude/settings.json
+# (hooks) is tracked so every agent session gets the same wiring.
+.claude/settings.local.json
+
+# SECRETS — never commit. Bedrock/AWS creds, SSH keys, NGC keys live in env
+# vars or ~/.aws, never in the repo. (Patterns kept narrow so they never match
+# a source path like .claude/skills/ngc-api-key/.)
+*.env
+.env
+*.pem
+*.key
+*.pfx
+*.p12
+.aws-exports
+nvapi-*
+id_ed25519
+id_rsa
+
+# Omniverse / USD build + cache artifacts (large, host-local)
+*.usdc.bak
+kit-cache/
+omni-cache/
+*.ov-local

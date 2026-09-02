@@ -1,0 +1,39 @@
+Exowatt x AWS x NVIDIA Omniverse digital twin - third-party notices
+===================================================================
+
+This product (POC / customer-engagement scaffolding) references software
+and platforms developed by third parties. No third-party code is
+redistributed in this repository; each component below retains its own
+license and is obtained from its canonical source.
+
+Platforms and SDKs (referenced, not redistributed)
+--------------------------------------------------
+- NVIDIA Omniverse / Omniverse Kit SDK (NVIDIA Omniverse License)
+  https://developer.nvidia.com/omniverse
+  Used for: the rendering / visualization layer of the digital twin
+  (USD scene authoring, headless Kit, streaming).
+
+- OpenUSD (Universal Scene Description) (Apache-2.0 / Pixar Modified)
+  https://openusd.org/
+  Used for: the scene description format authored by the render layer.
+
+- NVIDIA PhysX SDK (BSD-3-Clause)
+  https://developer.nvidia.com/physx-sdk
+  Referenced only. Exowatt's physics simulation runs on their own solver
+  (Titan). This repo does not own, size, or bundle PhysX.
+
+Python dependencies (obtained from PyPI)
+----------------------------------------
+- boto3 (Apache-2.0)
+  https://github.com/boto/boto3
+  Used for: AWS Service Quotas + EC2 provisioning calls. Imported lazily;
+  the offline verify path uses the Python standard library only.
+
+Cloud services referenced
+--------------------------
+- Amazon EC2 accelerated instances (g6e / g7e / g6) - https://aws.amazon.com/ec2/instance-types/
+- AWS Service Quotas - https://aws.amazon.com/about-aws/whats-new/service-quotas/
+- Amazon Bedrock (for the driving agent) - https://aws.amazon.com/bedrock/
+
+This NOTICE file is required to be retained in any distribution.
+Distribution requires the LICENSE permissions.
